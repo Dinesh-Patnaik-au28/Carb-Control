@@ -1,0 +1,235 @@
+/*
+---- 01 TYPOGRAPHY SYSTEM
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+-- Font weights
+Default: 400
+Medium: 500
+Semi-Bold: 600
+Bold: 700
+
+--Line Heights
+Default: 1
+Samal: 1.04
+Paragrapha defualt: 1.7
+Medium: 1.6
+
+
+
+---- 02 COLORS
+
+-- Primary: #fd7e14
+
+-- Tints: #fdf2e9, #fde1cd
+
+-- Shades #7c3404, #4c2606, #82c91e, #37b24d
+}
+
+-- Accents: #ffd43b
+
+-- Greys: #222, #444, #ddd
+
+---- 03 SHADOWS
+
+
+---- 04 BORDER-RADIUS
+
+---- 07 WHITE SPACE
+
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #444;
+  /* Only works if there is nothing absolutely positioned in relation to body*/
+  overflow-x: hidden;
+}
+/************************/
+/* GENRAL REUSABLE COMPONENTS */
+/************************/
+.heading-primary {
+  font-size: 5.1rem;
+  line-height: 1.04;
+  margin-bottom: 3.7rem;
+}
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+  /* column-gap: 6.4rem; */
+  /* column-gap: 6.4rem; */
+  column-gap: 6.7rem;
+  gap: 9.6rem;
+  /* margin-bottom: 9.6rem; */
+}
+/* .grid:last-child {
+  margin-bottom: 0%;
+} */
+.grid:not(:last-child) {
+  margin-bottom: 9.7rem;
+}
+.grid--center-v {
+  align-items: center;
+}
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+.btn--form:hover {
+  background-color: #fdf2e9;
+  color: #222;
+}
+.btn,
+.btn:link,
+.btn:visited {
+  /* background-color: #222; */
+  /* color: white; */
+  font-size: 2rem;
+  padding: 1.7rem 3.2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  display: inline-block;
+  transform: all 0.2s;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+/* *:focus {
+  outline: none;
+  outline: 4px dotted #7c3404;
+  box-shadow: 0 0 0 0.7rem #7c3404;
+} */
+.btn--form {
+  background-color: #7c3404;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  /* color: #222; */
+  color: #4c2606;
+  letter-spacing: -0.4px;
+}
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.1;
+  margin-bottom: 9.7rem;
+}
+.btn--full--class:link,
+.btn--full--class:visited {
+  background-color: #fd7e14;
+  color: white;
+}
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.7;
+  margin-bottom: 3.7rem;
+}
+.subheading {
+  font-weight: 600;
+  display: inline-block;
+  color: #7c3404;
+  text-transform: uppercase;
+  margin-bottom: 1.7rem;
+  letter-spacing: 0.74px;
+  font-size: 1.6rem;
+}
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+.btn--full--class:hover,
+.btn--full--class:active {
+  background-color: #7c3404;
+}
+.btn--outline:link,
+.btn--ouline:visited {
+  background-color: white;
+  color: #222;
+}
+.link:link,
+.link:visited {
+  color: #fd7e14;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  display: inline-block;
+  transition: all 0.2s;
+}
+.link:hover,
+.link:active {
+  color: #7c3404;
+  border-bottom: 1px solid transparent;
+}
+.margin-bottom-md {
+  margin-bottom: 4.7rem !important;
+}
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #fdf2e9;
+  box-shadow: inset 0 0 0 2px white;
+}
+strong {
+  font-weight: 600;
+}
+.center-text {
+  text-align: center;
+}
+.list-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  /* background-color: #fd7e14; */
+  color: #fd7e14;
+}
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+}
+.list-item {
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+  line-height: 1.2;
+}
+.omcr {
+  font-size: 1.4rem;
+  color: #444;
+  text-align: center;
+}
